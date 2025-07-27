@@ -1,18 +1,76 @@
 ---
- const {active} = Astro.props;
+type Props ={
+  active: "home" | "skills" | "about" | "contact";
+}
+
+ const {active}: Props = Astro.props;
 ---
 
-<nav class="relative top-0 flex justify-between">
+<nav class="sticky top-0 flex justify-evenly overflow-visible h-[70px] p-4">
 
-    <div>
-        <h1>PORTFOLIO</h1>
+    <div class="flex flex-1 items-center">
+        <h1 class="m-auto text-[20px]">PORTFOLIO</h1>
     </div>
 
-    <div>
+    <div class="flex flex-auto justify-center gap-4 items-center max-md:hidden">
+        <div class="menu bg-gray-600 p-2 rounded-full flex justify-center gap-2">
         <a href="#home">Home</a>
         <a href="#skills">Skills</a>
-        <a href="#about">About</a>
+        <a href="#about ">About</a>
         <a href="#contact">Contact</a>
+        </div>
     </div>
-    <div></div>
+
+    <div class="flex flex-col items-center translate-y-1/2 flex-1 gap-4 md:pointer-events-none md:opacity-0 m-4">
+        <img id="drop" class="drop -translate-y-1/2 w-8" src="/images/arrow.png">
+       <div id="links" class="hidden flex-col border-1 w-full text-center gap-2 -translate-y-1/6">
+        <a href="#home" class="menu">Home</a>
+        <a href="#skills" class="menu">Skills</a>
+        <a href="#about" class="menu">About</a>
+        <a href="#contact" class="menu">Contact</a>
+       </div>
+    </div>
 </nav>
+
+<script>
+    import {animate, hover, press} from "motion"
+
+    hover(".menu", (element) => {
+        animate(element, { scale: 1.02 }, { duration: 0.1 })
+
+        return () => animate(element, { scale: 1 })
+    })
+
+     press(".drop", (element) => {
+        animate(element, { scale: 0.8 }, { type: "spring", stiffness: 1000 })
+
+        return () =>
+            animate(element, { scale: 1 }, { type: "spring", stiffness: 500 })
+    })
+
+    let toggle = false;
+    let click = document.getElementById("drop");
+    let menu = document.getElementById("links");
+
+    click.addEventListener('click', ()=> {
+        toggle = !toggle
+
+        if(toggle) {
+        menu.style.display = "flex";
+        }
+
+        else{
+            menu.style.display = "none";
+        }
+ });
+  const observer = new IntersectionObserver((entry)=> {
+            entry.forEach((e)=>{
+                if(e.isIntersecting){
+
+                }
+                else{
+
+                }
+            })
+        })
+</script>
