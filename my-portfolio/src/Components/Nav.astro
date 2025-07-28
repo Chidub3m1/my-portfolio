@@ -4,15 +4,15 @@
 <nav class="sticky top-0 flex justify-evenly overflow-visible h-[70px] p-4">
 
     <div class="flex flex-1 items-center">
-        <h1 class="m-auto text-[20px]">PORTFOLIO</h1>
+        <h1 class="m-auto text-[15px]">PORTFOLIO</h1>
     </div>
 
     <div class="flex flex-auto justify-center gap-4 items-center max-md:hidden">
-        <div class="bg-gray-600 p-2 rounded-full flex justify-center gap-2">
-        <a href="#home" id="homeLink" class="menu text-white">Home</a>
-        <a href="#skills" id="skillsLink" class="menu text-white">Skills</a>
-        <a href="#about" id="aboutLink" class="menu text-white">About</a>
-        <a href="#contact" id="contactLink" class="menu text-white">Contact</a>
+        <div class="bg-gray-600 p-3 rounded-full flex justify-center gap-4">
+        <a href="#home" id="homeLink" class="menu text-white text-[15px]">Home</a>
+        <a href="#skills" id="skillsLink" class="menu text-white text-[15px]">Skills</a>
+        <a href="#about" id="aboutLink" class="menu text-white text-[15px]">About</a>
+        <a href="#contact" id="contactLink" class="menu text-white text-[15px]">Contact</a>
         </div>
     </div>
 
@@ -64,7 +64,8 @@
    } 
 
     let mq = window.innerWidth;
-    window.addEventListener("resize", () => {
+
+    const observe = () => {
         mq = window.innerWidth;
 
   const observer = new IntersectionObserver((entry)=> {
@@ -92,8 +93,8 @@
                     textb.classList.remove("bg-sky-400");
                     textb.classList.add("bg-gray-600")
                 }
-            })
-        })
+            }, {threshold: 0.5});
+        });
         
         const home = document.getElementById("home");
         const skills = document.getElementById("skills");
@@ -106,5 +107,8 @@
               observer.observe(section);
            }
         });
-         });
+         }
+    window.addEventListener("resize", observe);
+    window.addEventListener("DOMContentLoaded", observe);
+
 </script>
