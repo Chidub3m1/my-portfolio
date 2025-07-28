@@ -6,9 +6,49 @@ html {
 body{
     background-color: black;
 }
+svg{
+    color: white;
+}
+a{
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 600;
+}
 
 h1{
     color: white;
+}
+header{
+    font-family: 'Panchang', sans-serif;
+    animation: fadeIn 2s, moveIn 2s;
+}
+.drop-down{
+    animation: fadeIn 0.5s, slideIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes moveIn {
+    0%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}
+@keyframes slideIn {
+    0%{
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }
 
 
