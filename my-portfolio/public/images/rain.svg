@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
+  <defs>
+    <symbol id="SvgjsSymbol1217">
+      <path id="SvgjsPath1211" d="M0 0h1v1h-1z" />
+    </symbol>
+  </defs>
+  <g stroke="rgba(0, 0, 0, 1)" stroke-width="2">
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="24" y="84" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.18s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="51" y="225" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.16s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="100" y="315" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.31s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="128" y="50" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.37s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="178" y="470" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.02s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="240" y="122" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.49s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="280" y="198" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="1.97s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="310" y="320" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.48s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="340" y="95" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.38s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="400" y="400" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.23s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="430" y="135" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.43s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="460" y="270" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="1.80s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="500" y="220" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.42s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="540" y="60" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.00s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="600" y="450" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.39s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="640" y="180" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.02s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="670" y="290" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.05s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="700" y="105" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.19s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="750" y="370" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="1.98s" repeatCount="indefinite" />
+    </g>
+    <g>
+      <use xlink:href="#SvgjsPath1211" x="800" y="160" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,560" dur="2.40s" repeatCount="indefinite" />
+    </g>
+  </g>
+</svg>

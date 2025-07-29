@@ -5,6 +5,9 @@ html {
 }
 body{
     background-color: #a35a3e;
+    background-image: url("../../public/images/Sprinkle.svg");
+    background-repeat: repeat;
+    animation: move 2s ease-out forwards;
 }
 
 .cv{
@@ -98,5 +101,12 @@ h1{
         transform: scale(1);
     }
 }
-
+@keyframes move {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -1000px 1000px;
+    }
+  }
 
