@@ -1,18 +1,20 @@
 ---
-
+import { Image } from "astro:assets";
+import code from "../../public/images/code.png"
+import dropDown from "../../public/images/arrow.png"
 ---
-<nav class="sticky top-0 flex justify-evenly overflow-visible h-[70px] p-4">
+<nav class="bg-black sticky top-0 flex justify-evenly overflow-visible h-[70px] p-4">
 
     <div class="flex flex-1 items-center">
-        <img src="/images/code.png" alt="_logo" class="m-auto w-8">
+        <Image src={code} alt="_logo" format="webp" quality={10} class="m-auto w-8">
     </div>
 
     <div class="flex flex-auto justify-center gap-4 items-center max-md:hidden">
         <div class="p-3 flex justify-center gap-4">
-        <a href="#home" id="homeLink" class="menu hover:border-b-white hover:border-b-3 text-gray-400 text-[15px]">Home</a>
-        <a href="#skills" id="skillsLink" class="menu text-gray-400  text-[15px] hover:border-b-white hover:border-b-3">Skills</a>
-        <a href="#about" id="aboutLink" class="menu text-gray-400  text-[15px] hover:border-b-white hover:border-b-3">About</a>
-        <a href="#contact" id="contactLink" class="menu text-gray-400  text-[15px] hover:border-b-white hover:border-b-3">Contact</a>
+        <a href="#home" id="homeLink" class="menu p-2 hover:border-b-white hover:border-b-3 text-gray-400 text-[15px]">Home</a>
+        <a href="#skills" id="skillsLink" class="menu p-2 text-gray-400  text-[15px] hover:border-b-white hover:border-b-3">Skills</a>
+        <a href="#about" id="aboutLink" class="menu p-2 text-gray-400  text-[15px] hover:border-b-white hover:border-b-3">About</a>
+        <a href="#contact" id="contactLink" class="menu p-2 text-gray-400  text-[15px] hover:border-b-white hover:border-b-3">Contact</a>
         </div>
     </div>
 
