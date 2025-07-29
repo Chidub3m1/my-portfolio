@@ -3,10 +3,10 @@ import { Image } from "astro:assets";
 import code from "../../public/images/code.png"
 import dropDown from "../../public/images/arrow.png"
 ---
-<nav class="bg-black sticky top-0 flex justify-evenly overflow-visible h-[70px] p-4">
+<nav class="bg-black w-full sticky top-0 flex justify-evenly overflow-visible h-[70px] p-4">
 
     <div class="flex flex-1 items-center">
-        <Image src={code} alt="_logo" format="webp" quality={10} class="m-auto w-8">
+        <Image src={code} loading="eager" alt="_logo" format="webp" quality={10} class="m-auto w-8">
     </div>
 
     <div class="flex flex-auto justify-center gap-4 items-center max-md:hidden">

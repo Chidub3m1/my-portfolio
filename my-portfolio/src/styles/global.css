@@ -5,8 +5,9 @@ html {
 }
 body{
     background-color: #a35a3e;
-    background-image: url("../../public/images/Sprinkle.svg");
+    background-image: url("/images/Sprinkle.svg");
     background-repeat: repeat;
+    background-size: cover;
     animation: move 2s ease-out forwards;
 }
 
@@ -17,7 +18,7 @@ body{
 .hero__p{
       font-family: "Zen Kaku Gothic New", sans-serif;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 25px;
 }
 .hero__p--1{
     animation: slideRight 2s, fadeIn 2s;
@@ -32,6 +33,9 @@ a{
 
 h1{
     color: white;
+}
+.cv:hover {
+    box-shadow:  2px 2px 5px white;
 }
 .hero__header{
     font-family: 'Panchang', sans-serif;
