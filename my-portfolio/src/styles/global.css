@@ -19,6 +19,7 @@ h1{
 }
 header{
     font-family: 'Panchang', sans-serif;
+    white-space: normal;
     animation: fadeIn 2s, moveIn 2s;
 }
 .drop-down{
@@ -50,5 +51,13 @@ header{
         transform: translateX(0);
     }
 }
+@media (width < 400px) {
+    header{
+       
+        font-size: 40px;
+    
+        }
+    }
+
 
 
