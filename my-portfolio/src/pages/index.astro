@@ -1,16 +1,16 @@
 ---
 import Layout from "../layouts/layout.astro"
 import { Image } from "astro:assets";
-import github from '../../public/images/github.png'
-import file from "../../public/images/file.png"
-import LinkedIn from "../../public/images/linkedin.png"
-import html from '../../public/images/html.png'
-import css from '../../public/images/css3.png'
-import tailwind from '../../public/images/icons8-tailwind-css-480.png'
-import sass from '../../public/images/icons8-sass-480.png'
-import js from '../../public/images/js.png'
-import ts from '../../public/images/typescript.png'
-import react from '../../public/images/physics.png'
+import github from '../../public/images/github.svg'
+import file from "../../public/images/file.svg"
+import LinkedIn from "../../public/images/linkedin.svg"
+import html from '../../public/images/html.svg'
+import css from '../../public/images/css3.svg'
+import tailwind from '../../public/images/icons8-tailwind-css-480.svg'
+import sass from '../../public/images/icons8-sass-480.svg'
+import js from '../../public/images/js.svg'
+import ts from '../../public/images/typescript.svg'
+import react from '../../public/images/physics.svg'
 import astro from '../../public/favicon.svg'
 ---
 <Layout title="Dubem's Portfolio.">
@@ -28,36 +28,44 @@ import astro from '../../public/favicon.svg'
 </section>
 <section id="skills" class="skills rounded-4xl pt-8 min-h-screen">
     <div class="skills__container p-[1vw]">
-        <div class="skills__html">
+        <div id="html" class="skills__html">
             <Image src={html} alt="html" format="webp" quality={60} class="w-30 m-auto" />
+            <p class="text-white text-center pt-4">HTML 5</p>
         </div>
 
-        <div class="skills__css">
+        <div id="css" class="skills__css">
             <Image src={css} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <p class="text-white text-center pt-4">CSS</p>
         </div>
 
-        <div class="skills__tailwind">
+        <div id="tailwind" class="skills__tailwind">
             <Image src={tailwind} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <p class="text-white text-center pt-4">TAILWIND</p>
         </div>
 
-        <div class="skills__sass">
+        <div id="sass" class="skills__sass">
             <Image src={sass} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <p class="text-white text-center pt-4">SASS</p>
         </div>
 
-        <div class="skills__js">
+        <div id="js" class="skills__js">
             <Image src={js} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <p class="text-white text-center pt-4">JS</p>
         </div>
 
-        <div class="skills__ts">
+        <div id="ts" class="skills__ts">
             <Image src={ts} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <p class="text-white text-center pt-4">TS</p>
         </div>
 
-        <div class="skills__react">
+        <div id="react" class="skills__react">
             <Image src={react} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <p class="text-white text-center pt-4">REACT</p>
         </div>
 
-        <div class="skills__astro">
+        <div id="astro" class="skills__astro">
             <Image src={astro} alt="html" format="webp" quality={60} class="w-30 bg-gray-800 rounded-2xl m-auto"/>
+            <p class="text-white text-center pt-4">ASTRO</p>
         </div>
     </div>
 </section>
@@ -65,3 +73,43 @@ import astro from '../../public/favicon.svg'
 <section id="contact"></section>
 </div>
 </Layout>
+
+<script>
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((e => {
+            if(!e.isIntersecting){
+                e.target.classList.remove("opacity-100", "entry");
+                e.target.classList.add("opacity-0");
+            }
+            else if(e.isIntersecting){
+                e.target.classList.remove("opacity-0");
+                e.target.classList.add("opacity-100", "entry");
+            }
+        }))
+    });
+
+    const html = document.getElementById("html");
+    const css = document.getElementById("css");
+    const tailwind = document.getElementById("tailwind");
+    const sass = document.getElementById("sass");
+    const js = document.getElementById("js");
+    const ts = document.getElementById("ts");
+    const react = document.getElementById("react");
+    const astro = document.getElementById("astro");
+
+    const array = [html, css, tailwind, sass, js, ts, react, astro];
+    array.forEach(element => {
+        if(element != null){
+            observer.observe(element);
+        }
+    });
+
+    array.forEach(element => {
+        if(element != null){
+            element.addEventListener("mouseover", () => {
+                element.classList.add("hover:scale-[1.1]", "transition-all", "duration-5s")
+            })
+        }
+    });
+</script>

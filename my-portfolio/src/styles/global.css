@@ -2,186 +2,243 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
-body{
+
+body {
     background-color: #000000;
     background-image: url("/images/Sprinkle.svg");
     background-repeat: repeat;
     background-size: cover;
-    animation: move 4s linear forwards;
+    animation: move 8s ease-in-out infinite alternate;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    will-change: background-position;
 }
-nav{
-        background-color: rgba(0, 0, 0, 0.9);
+
+nav {
+    background-color: rgba(0, 0, 0, 0.9);
 
 }
-.cv{
+
+.cv {
     animation: zoom 3s, fadeIn 3s, shine 2s infinite;
 }
 
-.skills__container{
+.skills__container {
     display: grid;
     justify-content: center;
     gap: 80px;
     grid-template-columns: repeat(auto-fit, 20vw);
 }
-.skills__header{
-        font-family: 'Panchang', sans-serif;
+
+.skill__header {
+    font-family: 'Panchang', sans-serif;
+    text-shadow: -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black,
+        -1px 0px 0 black,
+        1px 0px 0 black,
+        0px -1px 0 black,
+        0px 1px 0 black;
 }
-.hero__p{
-      font-family: "Zen Kaku Gothic New", sans-serif;
-      font-weight: 500;
-      font-size: 25px;
+p{
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #ffffff;
 }
-.hero__p--1{
+
+.hero__p {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.hero__p--1 {
     animation: slideRight 3s, fadeIn 3s;
 }
-.hero__p--2{
+
+.hero__p--2 {
     animation: slideLeft 3s, fadeIn 3s;
 }
-a{
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 600;
+
+a {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 600;
 }
 
 
 
-.skills__html{
-    animation: float 2s infinite;
+.skills__html.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2s;
 }
-.skills__css{
-    animation: float 2s infinite;
-    animation-delay: 100ms;
+
+.skills__css.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2.1s;
 }
-.skills__tailwind{
-    animation: float 2s infinite;
-    animation-delay: 200ms;
+
+.skills__tailwind.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2.2s;
 }
-.skills__sass{
-    animation: float 2s infinite;
-    animation-delay: 300ms;
+
+.skills__sass.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2.3s;
 }
-.skills__js{
-    animation: float 2s infinite;
-    animation-delay: 400ms;
+
+.skills__js.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2.4s;
 }
-.skills__ts{
-    animation: float 2s infinite;
-    animation-delay: 500ms;
+
+.skills__ts.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2.5s;
 }
-.skills__react{
-    animation: float 2s infinite;
-    animation-delay: 600ms;
+
+.skills__react.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2.6s;
 }
-.skills__astro{
-    animation: float 2s infinite;
-    animation-delay: 700ms;
+
+.skills__astro.entry {
+    animation: zoom 2s, float 2s infinite;
+    animation-delay: 0s, 2.7s;
 }
 
 
-
-h1{
+h1 {
     color: white;
 }
+
 .cv:hover {
-    box-shadow:  none;
+    box-shadow: none;
     animation: none, zoom, fadeIn;
 }
-.hero__header{
+
+.hero__header {
     font-family: 'Panchang', sans-serif;
     white-space: normal;
     animation: fadeIn 3s, moveIn 3s;
 }
-.drop-down{
+
+.drop-down {
     animation: fadeIn 0.3s, slideIn 0.3s;
 }
 
+
 @keyframes fadeIn {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
+
 @keyframes moveIn {
-    0%{
+    0% {
         transform: translateY(100px);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 
 }
+
 @keyframes slideIn {
-    0%{
+    0% {
         transform: translateX(100px);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
 }
+
 @media (width < 400px) {
-    header{
-       
+    header {
+
         font-size: 40px;
-    
-        }
+
     }
+}
+
 @keyframes slideRight {
-    0%{
+    0% {
         transform: translateX(-100vw);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
 }
+
 @keyframes slideLeft {
-    0%{
+    0% {
         transform: translateX(100vw);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
 }
+
 @keyframes zoom {
-    0%{
+    0% {
         transform: scale(0.1);
     }
-    50%{
+
+    50% {
         transform: scale(1.05);
     }
-    100%{
+
+    100% {
         transform: scale(1);
     }
 }
+
 @keyframes move {
     from {
-      background-position: 0 0;
+        background-position: 0 0;
     }
+
     to {
-      background-position: -400px 400px;
+        background-position: -400px 400px;
     }
-  }
+}
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
+
 @keyframes shine {
-  0% {
-        box-shadow:  2px 2px 5px white;
-  }
-  50% {
-        box-shadow:  2px 2px 10px white;
-  }
-  100% {
-    box-shadow: 2px 2px 5px white;
-  }
+    0% {
+        box-shadow: 2px 2px 5px white;
+    }
+
+    50% {
+        box-shadow: 2px 2px 10px white;
+    }
+
+    100% {
+        box-shadow: 2px 2px 5px white;
+    }
 }
