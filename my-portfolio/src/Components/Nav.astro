@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import code from "../../public/images/code.png"
 import dropDown from "../../public/images/arrow.png"
 ---
-<nav class="bg-black w-full sticky top-0 flex justify-evenly overflow-visible h-[70px] p-4">
+<nav class=" w-full fixed top-0 flex justify-evenly overflow-visible h-[12vh] p-4 z-50">
 
     <div class="flex flex-1 items-center">
         <Image src={code} loading="eager" alt="_logo" format="webp" quality={10} class="m-auto w-8">
@@ -30,100 +30,83 @@ import dropDown from "../../public/images/arrow.png"
 </nav>
 
 <script>
-    import {animate, hover, press} from "motion"
+  import { animate, hover, press } from "motion";
 
-    hover(".menu", (element) => {
-        animate(element, { y: -1 }, { duration: 0.1 })
+  hover(".menu", (element) => {
+    animate(element, { y: -1 }, { duration: 0.1 });
+    return () => animate(element, { y: 0 });
+  });
 
-        return () => animate(element, { y: 0 })
-    })
+  press(".drop", (element) => {
+    animate(element, { scale: 0.8 }, { type: "spring", stiffness: 150 });
+    return () => animate(element, { scale: 1 }, { type: "spring", stiffness: 150 });
+  });
 
-     press(".drop", (element) => {
-        animate(element, { scale: 0.8 }, { type: "spring", stiffness: 150})
+  let toggle = false;
+  const click = document.getElementById("drop");
+  const menu = document.getElementById("links");
 
-        return () =>
-            animate(element, { scale: 1 }, { type: "spring", stiffness: 150 })
-    })
+  if (click && menu != null) {
+    click.addEventListener("click", () => {
+      toggle = !toggle;
+      if (toggle) {
+        menu.classList.remove("hidden");
+        menu.classList.add("flex", "drop-down");
+      } else {
+        menu.classList.remove("flex", "drop-down");
+        menu.classList.add("hidden");
+      }
+    });
 
-    let toggle = false;
-    const click = document.getElementById("drop");
-    const menu = document.getElementById("links");
+    menu.addEventListener("mouseleave", () => {
+      toggle = false;
+      menu.classList.remove("flex");
+      menu.classList.add("hidden");
+    });
+  }
 
-   if (click && menu != null){
-     click.addEventListener('click', ()=> {
-        toggle = !toggle
+  const observe = () => {
+    const mq = window.innerWidth;
 
-        if(toggle) {
-            menu.classList.remove("hidden");
-            menu.classList.add("flex", "drop-down");
-        }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const text = document.getElementById(`${e.target.id}Link`);
+          const textb = document.getElementById(`${e.target.id}Linkb`);
 
-        else{
-            menu.classList.remove("flex", "drop-down");
-            menu.classList.add("hidden");
-        }
- }
-
+          if (e.isIntersecting && text && mq > 768) {
+            text.classList.remove("text-gray-400");
+            text.classList.add("text-white");
+          } else if (!e.isIntersecting && text && mq > 768) {
+            text.classList.remove("text-white");
+            text.classList.add("text-gray-400");
+          } else if (e.isIntersecting && textb && mq < 768) {
+            textb.classList.remove("bg-black", "text-gray-400");
+            textb.classList.add("bg-white", "text-black");
+          } else if (!e.isIntersecting && textb && mq < 768) {
+            textb.classList.remove("bg-white", "text-black");
+            textb.classList.add("bg-black", "text-gray-400");
+          }
+        });
+      },
+      { threshold: 0.7 } 
     );
 
-    menu.addEventListener('mouseleave', () => {
-            toggle = false;
-            menu.classList.remove("flex");
-            menu.classList.add("hidden");
-    })
-   } 
-   
+    const sectionIds = ["home", "skills", "about", "contact"];
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+  };
 
-    let mq = window.innerWidth;
+  window.addEventListener("DOMContentLoaded", observe);
 
-    const observe = () => {
-        mq = window.innerWidth;
-
-  const observer = new IntersectionObserver((entry)=> {
-            entry.forEach((e)=>{
-            const text = document.getElementById(`${e.target.id}Link`);
-            const textb = document.getElementById(`${e.target.id}Linkb`);
-
-                if(e.isIntersecting && text != null && mq > 768){
-
-                    text.classList.remove("text-gray-400");
-                    text.classList.add("text-white")
-
-                }
-                else if(!e.isIntersecting && text != null && mq > 768){
-                    text.classList.remove("text-white");
-                    text.classList.add("text-gray-400")
-                }
-                else if(e.isIntersecting && textb != null && mq < 768){
-
-                    textb.classList.remove("bg-black");
-                    textb.classList.add("bg-white");
-                    textb.classList.add("text-black");
-                    textb.classList.remove("text-gray-400");
-
-                }
-                else if(!e.isIntersecting && textb != null && mq < 768){
-                    textb.classList.remove("bg-white");
-                    textb.classList.add("bg-black");
-                    textb.classList.remove("text-black");
-                    textb.classList.add("text-gray-400");
-                }
-            }, {threshold: 0.5});
-        });
-        
-        const home = document.getElementById("home");
-        const skills = document.getElementById("skills");
-        const about = document.getElementById("about");
-        const contact = document.getElementById("contact");
-
-        const sections = [home, skills, about, contact];
-        sections.forEach((section)=>{
-           if (section != null){
-              observer.observe(section);
-           }
-        });
-         }
-    window.addEventListener("resize", observe);
-    window.addEventListener("DOMContentLoaded", observe);
+  let resizeTimeout: ReturnType<typeof setTimeout>;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    observe();
+  }, 300);
+});
 
 </script>

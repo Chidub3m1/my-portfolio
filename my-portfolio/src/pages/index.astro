@@ -4,24 +4,61 @@ import { Image } from "astro:assets";
 import github from '../../public/images/github.png'
 import file from "../../public/images/file.png"
 import LinkedIn from "../../public/images/linkedin.png"
+import html from '../../public/images/html.png'
+import css from '../../public/images/css3.png'
+import tailwind from '../../public/images/icons8-tailwind-css-480.png'
+import sass from '../../public/images/icons8-sass-480.png'
+import js from '../../public/images/js.png'
+import ts from '../../public/images/typescript.png'
+import react from '../../public/images/physics.png'
+import astro from '../../public/favicon.svg'
 ---
 <Layout title="Dubem's Portfolio.">
-<div class="flex flex-col justify-center gap-y-10">
-    <section id="home" class="hero mt-15 p-8 h-[70vh]">
-    <header class="hero__header hover:scale-[1.01] tracking-wider text-black text-center text-[70px] max-md:text-[40px] transition-all duration-2s">Hi, I'm Chidubem</header>
-    <p class="hero__p hero__p--1 text-center mt-4">Fullstack Web Developer.</p>
+<div class="flex flex-col gap-[30px] mt-[12vh]">
+    <section id="home" class="hero p-8 min-h-[88vh]">
+    <header class="hero__header hover:scale-[1.01] tracking-wider mt-[10vh] text-white text-center text-[70px] max-md:text-[40px] transition-all duration-2s">Hi, I'm Chidubem</header>
+    <p class="hero__p hero__p--1 text-center mt-4 text-white">I am a Web Developer.</p>
     <br>
-    <p class="hero__p hero__p--2 text-center">Let's turn your ideas into polished, production ready web applications.</p>
+    <p class="hero__p hero__p--2 text-center text-white">Let's turn your ideas into polished, production ready web applications.</p>
     <br>
-    <button class="cv flex hover:scale-[1.05] hover:-rotate-5 transition-all duration-2s bg-amber-200 gap-2 border-1 mt-8 p-2 rounded-2xl m-auto active:bg-transparent">
-        download cv
-        <Image src={file} alt="cv" class="w-6" format="webp" quality={10} loading="eager"/>
-    </button>
+    <a href="https://github.com/heislaflamme" target="_blank" rel="noopener noreferrer" class="cv w-fit flex -rotate-5 hover:rotate-0 transition-all duration-5s bg-amber-200 gap-2 border-1 mt-8 p-2 rounded-2xl m-auto hover:scale-[1.1] active:bg-amber-100">
+        Visit my github
+        <Image src={github} alt="github" class="w-6" format="webp" quality={10} loading="eager"/>
+    </a>
 </section>
-<section id="skills" class="mt-10">
-    <header class="hero__header tracking-wider text-black text-center text-[70px] max-md:text-[40px]" >Skills & Services</header>
-    <div>
-        
+<section id="skills" class="skills rounded-4xl pt-8 min-h-screen">
+    <div class="skills__container p-[1vw]">
+        <div class="skills__html">
+            <Image src={html} alt="html" format="webp" quality={60} class="w-30 m-auto" />
+        </div>
+
+        <div class="skills__css">
+            <Image src={css} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+        </div>
+
+        <div class="skills__tailwind">
+            <Image src={tailwind} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+        </div>
+
+        <div class="skills__sass">
+            <Image src={sass} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+        </div>
+
+        <div class="skills__js">
+            <Image src={js} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+        </div>
+
+        <div class="skills__ts">
+            <Image src={ts} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+        </div>
+
+        <div class="skills__react">
+            <Image src={react} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+        </div>
+
+        <div class="skills__astro">
+            <Image src={astro} alt="html" format="webp" quality={60} class="w-30 bg-gray-800 rounded-2xl m-auto"/>
+        </div>
     </div>
 </section>
 <section id="about"></section>

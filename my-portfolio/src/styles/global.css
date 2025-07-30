@@ -4,46 +4,95 @@ html {
     scroll-behavior: smooth;
 }
 body{
-    background-color: #a35a3e;
+    background-color: #000000;
     background-image: url("/images/Sprinkle.svg");
     background-repeat: repeat;
     background-size: cover;
-    animation: move 2s ease-out forwards;
+    animation: move 4s linear forwards;
 }
+nav{
+        background-color: rgba(0, 0, 0, 0.9);
 
+}
 .cv{
-    animation: zoom 2s, fadeIn 2s;
+    animation: zoom 3s, fadeIn 3s, shine 2s infinite;
 }
 
+.skills__container{
+    display: grid;
+    justify-content: center;
+    gap: 80px;
+    grid-template-columns: repeat(auto-fit, 20vw);
+}
+.skills__header{
+        font-family: 'Panchang', sans-serif;
+}
 .hero__p{
       font-family: "Zen Kaku Gothic New", sans-serif;
       font-weight: 500;
       font-size: 25px;
 }
 .hero__p--1{
-    animation: slideRight 2s, fadeIn 2s;
+    animation: slideRight 3s, fadeIn 3s;
 }
 .hero__p--2{
-    animation: slideLeft 2s, fadeIn 2s;
+    animation: slideLeft 3s, fadeIn 3s;
 }
 a{
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 600;
 }
 
+
+
+.skills__html{
+    animation: float 2s infinite;
+}
+.skills__css{
+    animation: float 2s infinite;
+    animation-delay: 100ms;
+}
+.skills__tailwind{
+    animation: float 2s infinite;
+    animation-delay: 200ms;
+}
+.skills__sass{
+    animation: float 2s infinite;
+    animation-delay: 300ms;
+}
+.skills__js{
+    animation: float 2s infinite;
+    animation-delay: 400ms;
+}
+.skills__ts{
+    animation: float 2s infinite;
+    animation-delay: 500ms;
+}
+.skills__react{
+    animation: float 2s infinite;
+    animation-delay: 600ms;
+}
+.skills__astro{
+    animation: float 2s infinite;
+    animation-delay: 700ms;
+}
+
+
+
 h1{
     color: white;
 }
 .cv:hover {
-    box-shadow:  2px 2px 5px white;
+    box-shadow:  none;
+    animation: none, zoom, fadeIn;
 }
 .hero__header{
     font-family: 'Panchang', sans-serif;
     white-space: normal;
-    animation: fadeIn 2s, moveIn 2s;
+    animation: fadeIn 3s, moveIn 3s;
 }
 .drop-down{
-    animation: fadeIn 0.5s, slideIn 0.5s;
+    animation: fadeIn 0.3s, slideIn 0.3s;
 }
 
 @keyframes fadeIn {
@@ -110,7 +159,29 @@ h1{
       background-position: 0 0;
     }
     to {
-      background-position: -1000px 1000px;
+      background-position: -400px 400px;
     }
   }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes shine {
+  0% {
+        box-shadow:  2px 2px 5px white;
+  }
+  50% {
+        box-shadow:  2px 2px 10px white;
+  }
+  100% {
+    box-shadow: 2px 2px 5px white;
+  }
+}
