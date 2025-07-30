@@ -2,8 +2,6 @@
 import Layout from "../layouts/layout.astro"
 import { Image } from "astro:assets";
 import github from '../../public/images/github.svg'
-import file from "../../public/images/file.svg"
-import LinkedIn from "../../public/images/linkedin.svg"
 import html from '../../public/images/html.svg'
 import css from '../../public/images/css3.svg'
 import tailwind from '../../public/images/icons8-tailwind-css-480.svg'
@@ -12,10 +10,12 @@ import js from '../../public/images/js.svg'
 import ts from '../../public/images/typescript.svg'
 import react from '../../public/images/physics.svg'
 import astro from '../../public/favicon.svg'
+import me from '../../public/images/me.png'
 ---
 <Layout title="Dubem's Portfolio.">
 <div class="flex flex-col gap-[30px] mt-[12vh]">
-    <section id="home" class="hero p-8 min-h-[88vh]">
+
+<section id="home" class="hero p-8 min-h-[88vh]">
     <header class="hero__header hover:scale-[1.01] tracking-wider mt-[10vh] text-white text-center text-[70px] max-md:text-[40px] transition-all duration-2s">Hi, I'm Chidubem</header>
     <p class="hero__p hero__p--1 text-center mt-4 text-white">I am a Web Developer.</p>
     <br>
@@ -26,67 +26,80 @@ import astro from '../../public/favicon.svg'
         <Image src={github} alt="github" class="w-6" format="webp" quality={10} loading="eager"/>
     </a>
 </section>
+
 <section id="skills" class="skills rounded-4xl pt-8 min-h-screen">
     <div class="skills__container p-[1vw]">
         <div id="html" class="skills__html">
-            <Image src={html} alt="html" format="webp" quality={60} class="w-30 m-auto" />
+            <Image src={html} alt="skill" class="w-30 m-auto" />
             <p class="text-white text-center pt-4">HTML 5</p>
         </div>
 
         <div id="css" class="skills__css">
-            <Image src={css} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <Image src={css} alt="skill" class="w-30 m-auto"/>
             <p class="text-white text-center pt-4">CSS</p>
         </div>
 
         <div id="tailwind" class="skills__tailwind">
-            <Image src={tailwind} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <Image src={tailwind} alt="skill" class="w-30 m-auto"/>
             <p class="text-white text-center pt-4">TAILWIND</p>
         </div>
 
         <div id="sass" class="skills__sass">
-            <Image src={sass} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <Image src={sass} alt="skill" class="w-30 m-auto"/>
             <p class="text-white text-center pt-4">SASS</p>
         </div>
 
         <div id="js" class="skills__js">
-            <Image src={js} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <Image src={js} alt="skill" class="w-30 m-auto"/>
             <p class="text-white text-center pt-4">JS</p>
         </div>
 
         <div id="ts" class="skills__ts">
-            <Image src={ts} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <Image src={ts} alt="skill" class="w-30 m-auto"/>
             <p class="text-white text-center pt-4">TS</p>
         </div>
 
         <div id="react" class="skills__react">
-            <Image src={react} alt="html" format="webp" quality={60} class="w-30 m-auto"/>
+            <Image src={react} alt="skill" class="w-30 m-auto"/>
             <p class="text-white text-center pt-4">REACT</p>
         </div>
 
         <div id="astro" class="skills__astro">
-            <Image src={astro} alt="html" format="webp" quality={60} class="w-30 bg-gray-800 rounded-2xl m-auto"/>
+            <Image src={astro} alt="skill" class="w-30 bg-gray-800 rounded-2xl m-auto"/>
             <p class="text-white text-center pt-4">ASTRO</p>
         </div>
     </div>
 </section>
-<section id="about"></section>
-<section id="contact"></section>
+
+<section id="about" class="min-h-screen mt-[150px]">
+    <div class="about relative ml-[2vw] mr-[2vw] rounded-2xl">
+    <Image src={me} alt="me" class="me w-[150px] rounded-full z-20 left-1/2 -translate-x-1/2 -translate-y-1/6 absolute" format="webp" quality={60} />
+    <div>
+        <p class="pt-[180px] text-center font-bold">hahaha</p>
+    </div>
+    </div>
+    </div>
+</section>
+
+<section id="contact">
+</section>
+
 </div>
 </Layout>
 
 <script>
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((e => {
-            if(!e.isIntersecting){
+        entries.forEach((e) => {
+            if (!e.isIntersecting) {
                 e.target.classList.remove("opacity-100", "entry");
                 e.target.classList.add("opacity-0");
             }
-            else if(e.isIntersecting){
+            else if (e.isIntersecting) {
                 e.target.classList.remove("opacity-0");
                 e.target.classList.add("opacity-100", "entry");
             }
-        }))
+        })
     });
 
     const html = document.getElementById("html");
@@ -100,13 +113,13 @@ import astro from '../../public/favicon.svg'
 
     const array = [html, css, tailwind, sass, js, ts, react, astro];
     array.forEach(element => {
-        if(element != null){
+        if (element !== null) {
             observer.observe(element);
         }
     });
 
     array.forEach(element => {
-        if(element != null){
+        if (element !== null) {
             element.addEventListener("mouseover", () => {
                 element.classList.add("hover:scale-[1.1]", "transition-all", "duration-5s")
             })

@@ -10,7 +10,7 @@ body {
     background-image: url("/images/Sprinkle.svg");
     background-repeat: repeat;
     background-size: cover;
-    animation: move 8s ease-in-out infinite alternate;
+    animation: move 4s ease-in-out infinite alternate;
     overflow-x: hidden;
     scroll-behavior: smooth;
     will-change: background-position;
@@ -43,19 +43,16 @@ nav {
         0px -1px 0 black,
         0px 1px 0 black;
 }
-p{
-        font-family: "Zen Kaku Gothic New", sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        color: #ffffff;
-}
 
 .hero__p {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
     font-size: 25px;
 }
+p{
+        font-family: "Zen Kaku Gothic New", sans-serif;
 
+}
 .hero__p--1 {
     animation: slideRight 3s, fadeIn 3s;
 }
@@ -129,6 +126,12 @@ h1 {
 
 .drop-down {
     animation: fadeIn 0.3s, slideIn 0.3s;
+}
+.about{
+        background-color: rgba(255, 255, 255, 1);
+}
+.me {
+    background-color: rgba(26, 23, 23, 1);
 }
 
 
@@ -221,7 +224,7 @@ h1 {
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-4px);
     }
 
     100% {
