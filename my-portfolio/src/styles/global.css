@@ -53,6 +53,12 @@ p{
         font-family: "Zen Kaku Gothic New", sans-serif;
 
 }
+.about__content{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    justify-content: center;
+    gap: 40px;
+}
 .hero__p--1 {
     animation: slideRight 3s, fadeIn 3s;
 }
