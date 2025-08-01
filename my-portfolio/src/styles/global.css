@@ -22,6 +22,7 @@ nav {
 }
 
 .cv {
+    will-change: box-shadow;
     animation: zoom 3s, fadeIn 3s, shine 2s infinite;
 }
 
@@ -53,12 +54,8 @@ p{
         font-family: "Zen Kaku Gothic New", sans-serif;
 
 }
-.about__content{
-    display: grid;
-    grid-template-columns: 300px 300px;
-    justify-content: center;
-    gap: 40px;
-}
+
+
 .hero__p--1 {
     animation: slideRight 3s, fadeIn 3s;
 }
@@ -75,48 +72,56 @@ a {
 
 
 .skills__html.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2s;
 }
 
 .skills__css.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2.1s;
 }
 
 .skills__tailwind.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2.2s;
 }
 
 .skills__sass.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2.3s;
 }
 
 .skills__js.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2.4s;
 }
 
 .skills__ts.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2.5s;
 }
 
 .skills__react.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2.6s;
 }
 
 .skills__astro.entry {
+    will-change: transform, opacity;
     animation: zoom 2s, float 2s infinite;
     animation-delay: 0s, 2.7s;
 }
 
 
 h1 {
-    color: white;
+        font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
 .cv:hover {
@@ -134,11 +139,10 @@ h1 {
     animation: fadeIn 0.3s, slideIn 0.3s;
 }
 .about{
-        background-color: rgba(255, 255, 255, 1);
+    will-change: transform;
+    background-color: rgba(255, 255, 255, 1);
 }
-.me {
-    background-color: rgba(26, 23, 23, 1);
-}
+
 
 
 @keyframes fadeIn {
@@ -178,6 +182,14 @@ h1 {
         font-size: 40px;
 
     }
+}
+@media (width < 768px) {
+    .about__content{
+    display: grid;
+    grid-template-columns: 80vw;
+    justify-content: center;
+    gap: 2px;
+}
 }
 
 @keyframes slideRight {
