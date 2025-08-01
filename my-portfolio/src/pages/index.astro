@@ -74,11 +74,23 @@ import about from '../../public/images/person.svg'
 
 <section id="about" class="min-h-screen mt-[150px] scroll-mt-[15vh] m-auto relative">
     <div class="absolute top-[10vh] -translate-x-1/2">
-        <div class="book bg-white">
-    <div class="mx-20 my-10 border-2 p-1">
-        <Image src={me} alt="me" class="w-[100px] rounded-full m-auto" />
+        <div class="book bg-gray-300">
+    <div class="scroll pt-10 pl-10 flex flex-col">
+        <div class="flex gap-2 px-2">
+            <Image src={me} alt="me" class="w-[100px] bg-white m-auto border-2" />
+            <strong class="m-auto">I'm a Frontend Web Developer, based in the city of Lagos, Nigeria🌍.</strong>
+        </div>
+
+            <div class="px-2 pt-4">
+                <p class="font-black">I am very confident in my ability to build clean, fast, responsive and SEO websites, <br>
+                my tech stack includes the latest technologies, such as HTML, CSS, Tailwind, SASS, JS, TS, REACT and Astro.
+                <br> My website was especially made using Astro, paired with tailwind, css and TypeScript.
+                <br>I am confident in my stack and I use it well.
+                </p>
+            </div>
+
      </div>
-    <div class="cover bg-gray-900 relative">
+    <div class="cover bg-gray-900 relative border-2 border-l-[20px]">
         <h1 class="about__cover text-2xl text-white tracking-wider flex flex-col gap-4">
             <Image src={about} alt="about" class="ab w-20 bg-amber-200 rounded-full p-2 m-auto"/>
             ABOUT ME
