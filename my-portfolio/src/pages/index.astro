@@ -17,10 +17,10 @@ import about from '../../public/images/person.svg'
 <div class="flex flex-col gap-[30px] mt-[12vh]">
 
 <section id="home" class="hero p-8 min-h-[88vh] scroll-mt-[100px]">
-    <header class="hero__header hover:scale-[1.01] tracking-wider mt-[10vh] text-white text-center text-[70px] max-md:text-[40px] transition-all duration-2s">Hi, I'm Chidubem</header>
-    <p class="hero__p hero__p--1 text-center mt-4 text-white">I am a Web Developer.</p>
+    <header class="hero__header hover:scale-[1.01] tracking-wider mt-[10vh] text-white text-center text-[70px] max-md:text-[40px] transition-all duration-2s">HI, I'M CHIDUBEM</header>
+    <p class="hero__p hero__p--1 text-center mt-4 text-white">I am a Frontend Web Developer.</p>
     <br>
-    <p class="hero__p hero__p--2 text-center text-white">Let's turn your ideas into polished, production ready web applications.</p>
+    <p class="hero__p hero__p--2 text-center text-white">Let's turn your ideas into polished, production ready SEO web applications.</p>
     <br>
     <a href="https://github.com/heislaflamme" target="_blank" rel="noopener noreferrer" class="cv w-fit flex -rotate-5 hover:rotate-0 transition-all duration-5s bg-amber-200 gap-2 border-1 mt-8 p-2 rounded-2xl m-auto hover:scale-[1.1] active:bg-amber-100">
         Visit my github
@@ -72,20 +72,20 @@ import about from '../../public/images/person.svg'
     </div>
 </section>
 
-<section id="about" class="min-h-screen mt-[150px] scroll-mt-[15vh]">
-    <div class="about relative ml-[2vw] mr-[2vw] rounded-2xl">
-        <h1 class="text-center text-black font-bold flex flex-col-reverse gap-2">ABOUT ME
-        <Image src={about} alt="about" class="w-15 m-auto pt-4"/>
-            </h1>
-    <div class="about__container pb-[20px]">
-        <div class="about__content">
-        <div class="flex flex-col justify-center py-4 rounded-2xl">
-        <Image src={me} alt="about" class="w-20 rounded-full m-auto" format="webp" quality={60}/>
-            <p class="text-black font-black p-4">i am</p>
-        </div>
-        </div>
+<section id="about" class="min-h-screen mt-[150px] scroll-mt-[15vh] m-auto relative">
+    <div class="absolute top-[10vh] -translate-x-1/2">
+        <div class="book bg-white">
+    <div class="mx-20 my-10 border-2 p-1">
+        <Image src={me} alt="me" class="w-[100px] rounded-full m-auto" />
+     </div>
+    <div class="cover bg-gray-900 relative">
+        <h1 class="about__cover text-2xl text-white tracking-wider flex flex-col gap-4">
+            <Image src={about} alt="about" class="ab w-20 bg-amber-200 rounded-full p-2 m-auto"/>
+            ABOUT ME
+        </h1>
+        <p class="tap absolute text-white top-[100%] -translate-y-full p-4 tracking-widest opacity-40">tap</p>
     </div>
-    </div>
+   </div>
     </div>
 </section>
 
@@ -133,4 +133,15 @@ import about from '../../public/images/person.svg'
             })
         }
     });
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const book = document.querySelector(".book");
+
+        if(book !== null){
+            book.addEventListener("click", () => {
+      book.classList.toggle("open");
+    });
+        }
+  });
+
 </script>
