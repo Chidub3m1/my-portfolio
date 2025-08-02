@@ -212,9 +212,9 @@ h1 {
     will-change: transform;
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-transform: rotateY(-85deg);
-  -ms-transform: rotateY(-85deg);
-  transform: rotateY(-85deg);
+  -webkit-transform: rotateY(-80deg);
+  -ms-transform: rotateY(-80deg);
+  transform: rotateY(-80deg);
 }
 
 .scroll{
