@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/layout.astro"
+import { Image } from "astro:assets";
+import lost from '../../public/images/404.png'
+---
+
+<Layout>
+    <div class="mt-[30vh] flex flex-col gap-4">
+        <Image src={lost} class="w-30 mx-auto" alt="404" />
+    <h1 class="not__found text-2xl text-white text-center font-extrabold tracking-widest">Oops! Page not found...</h1>
+    <a href="/" class="text-white text-center bg-red-600 w-fit m-auto p-3 rounded-full active:bg-red-500">Go back to home Page</a>
+    </div>
+</Layout>

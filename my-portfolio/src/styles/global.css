@@ -9,7 +9,7 @@ body {
     background-color: #000000;
     background-image: url("/images/Sprinkle.svg");
     background-repeat: repeat;
-    background-size: cover;
+    background-size: auto;
     animation: move 4s ease-in-out infinite alternate;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -136,7 +136,10 @@ h1 {
 .about__cover{
      font-family: 'Panchang', sans-serif;
 }
+.not__found{
+    font-family: 'Panchang', sans-serif;
 
+}
 .hero__header {
     font-family: 'Panchang', sans-serif;
     white-space: normal;
@@ -147,11 +150,19 @@ h1 {
     animation: fadeIn 0.3s, slideIn 0.3s;
 }
 
+.contact__text{
+    font-family: 'Panchang', sans-serif;
+}
+.social{
+    will-change: transform;
+    animation: float 3s infinite;
+    box-shadow: 0px 0px 5px white;
+}
 .book {
   position: relative;
   border-radius: 10px;
-  width: 70vw;
-  height: 90vh;
+  width: 50vw;
+  height: 70vh;
   -webkit-box-shadow: 1px 1px 12px #000;
   box-shadow: 1px 1px 12px #4d4c4c;
   -webkit-transform: preserve-3d;
@@ -201,9 +212,9 @@ h1 {
     will-change: transform;
   -webkit-transition: all 1s;
   transition: all 1s;
-  -webkit-transform: rotateY(-80deg);
-  -ms-transform: rotateY(-80deg);
-  transform: rotateY(-80deg);
+  -webkit-transform: rotateY(-85deg);
+  -ms-transform: rotateY(-85deg);
+  transform: rotateY(-85deg);
 }
 
 .scroll{
