@@ -7,6 +7,9 @@ const {title} = Astro.props
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <title>{title}</title>
+    <link rel="canonical" href="https://chidubem.name.ng" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link href="https://api.fontshare.com/v2/css?f[]=bespoke-stencil@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +17,16 @@ const {title} = Astro.props
     <link href="https://api.fontshare.com/v2/css?f[]=panchang@800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/images/nigeria (1).png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Freelancer, Full-stack web developer " />
+    <meta name="description" content="I'm Chidubem, a front-end web developer crafting modern websites and web apps with Astro, React, and TypeScript." />
     <meta name="author" content="Chidubem Emeka-Ogbu" />
-
+    <meta property="og:image" content="https://chidubem.name.ng/images/hi.png" />
+    <meta name="twitter:image" content="https://chidubem.name.ng/images/hi.png" />
     <meta property="og:title" content="Full-Stack Developer Portfolio" />
     <meta
       property="og:description"
       content="Explore my portfolio."
     />
-    <meta property="og:url" content="https://dubem.vercel.app" />
+    <meta property="og:url" content="https://chidubem.name.ng" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,7 +39,6 @@ const {title} = Astro.props
       content="Explore my portfolio"
     />
 
-    <title>{title}</title>
   </head>
   <body ontouchstart="">
 	<Nav/>
