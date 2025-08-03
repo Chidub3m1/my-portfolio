@@ -136,6 +136,13 @@ h1 {
 .about__cover{
      font-family: 'Panchang', sans-serif;
 }
+.about__p{
+   
+  font-family: "Cutive Mono", monospace;
+  font-style: normal;
+
+
+}
 .not__found{
     font-family: 'Panchang', sans-serif;
 
