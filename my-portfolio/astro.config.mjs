@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://dubem.vercel.app',
+  site: 'https://chidubem.name.ng',
 
   vite: {
     plugins: [tailwindcss()]
